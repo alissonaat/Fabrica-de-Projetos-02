@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro Cliente</title>
+    <link rel="stylesheet" href="CSS/tela_de_cadastro_cliente.css">
+</head>
+<body>
+
+    <header>
+        <div class="topo">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+            <div class="pesquisa">
+                <span>🔍</span>
+                <input type="text" placeholder="Pesquise produtos e muito mais...">
+            </div>
+
+            <div class="acoes">
+                <button type="button" aria-label="Notificações">🔔</button>
+                <button type="button" aria-label="Carrinho">🛒</button>
+                <button type="button" class="perfil" aria-label="Perfil">👤</button>
+            </div>
+        </div>
+
+        <nav class="menu-principal">
+            <a href="#">Home</a>
+            <a href="#">Projetos</a>
+            <a href="#" class="personalizar">Personalize sua roupa</a>
+            <a href="#">Sobre nós</a>
+        </nav>
+
+        <nav class="menu">
+            <a href="#">Camisetas</a>
+            <a href="#">Jalecos</a>
+            <a href="#">Moletons</a>
+            <a href="#">Calças</a>
+            <a href="#">Bonés</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Novidades</a>
+            <a href="#">Promoções</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- APRESENTAÇÃO -->
+        <section class="apresentacao">
+            <h1>Crie sua conta</h1>
+
+            <p>
+                Cadastre-se para acompanhar seus pedidos
+                e ter uma experiência mais completa
+                na NANABOROK.
+            </p>
+
+            <div class="vantagens">
+                <h3>Vantagens de ter uma conta</h3>
+                <ul>
+                    <li>Acompanhe seus pedidos</li>
+                    <li>Salve seus produtos favoritos</li>
+                    <li>Agilize suas próximas compras</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CADASTRO -->
+        <section class="cadastro">
+            <form action="#" method="post">
+                <div>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
+                </div>
+
+                <div>
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" autocomplete="new-password" required>
+                </div>
+
+                <div>
+                    <label for="confirmarSenha">Confirme sua senha</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" autocomplete="new-password" required>
+                </div>
+
+                <div class="termos">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">
+                        Li e concordo com os
+                        <a href="#">Termos de Uso</a>
+                        e a
+                        <a href="#">Política de Privacidade</a>
+                    </label>
+                </div>
+
+                <button type="submit">Criar minha conta</button>
+            </form>
+        </section>
+
+        <!-- LOGIN TRADICIONAL -->
+        <section class="login">
+            <div class="login-intro">
+                <h1>Já possui uma conta?</h1>
+                <p>Faça seu login com e-mail e senha</p>
+            </div>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="emailLogin">E-mail</label>
+                    <input type="email" id="emailLogin" name="emailLogin" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" id="senhaLogin" name="senhaLogin" autocomplete="current-password" required>
+                </div>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <!-- LOGIN SOCIAL -->
+        <aside class="login-social">
+            <h2>Entre rapidamente com:</h2>
+
+            <button type="button" class="botao-social google">
+                <img src="img/Google.png" alt="" class="icone-social">
+                <span>Continuar com o Google</span>
+            </button>
+
+            <button type="button" class="botao-social facebook">
+                <img src="img/facebook.png" alt="" class="icone-social">
+                <span>Continuar com o Facebook</span>
+            </button>
+
+            <button type="button" class="botao-social apple">
+                <img src="img/apple.png" alt="" class="icone-social">
+                <span>Continuar com a Apple</span>
+            </button>
+
+            <div class="logo-lateral">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- BENEFÍCIOS -->
+        <section class="beneficios">
+            <div class="beneficio">
+                <div class="beneficio-icone"><span>🚚</span></div>
+                <div>
+                    <h3>Entrega rápida</h3>
+                    <p>Seu pedido com agilidade<br>e segurança.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <div class="beneficio-icone">
+                    <img src="img/bandeira_brasil.png" alt="Brasil">
+                </div>
+                <div>
+                    <h3>Para todo o Brasil</h3>
+                    <p>Enviamos para todo o país<br>com praticidade.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <div class="beneficio-icone"><span>🔒</span></div>
+                <div>
+                    <h3>Compra segura</h3>
+                    <p>Seus dados protegidos<br>em todas as etapas.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-footer">
+
+        <!-- LINKS DO RODAPÉ -->
+        <section class="links-footer">
+            <div>
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Camisetas <span>›</span></a></li>
+                    <li><a href="#">Jalecos <span>›</span></a></li>
+                    <li><a href="#">Moletons <span>›</span></a></li>
+                    <li><a href="#">Calças <span>›</span></a></li>
+                    <li><a href="#">Bonés <span>›</span></a></li>
+                    <li><a href="#">Acessórios <span>›</span></a></li>
+                    <li><a href="#">Novidades <span>›</span></a></li>
+                    <li><a href="#">Promoções <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">Sobre a NANABOROK <span>›</span></a></li>
+                    <li><a href="#">Nossa missão <span>›</span></a></li>
+                    <li><a href="#">Envie uma ideia <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#">Central de ajuda <span>›</span></a></li>
+                    <li><a href="#">Trocas e devoluções <span>›</span></a></li>
+                    <li><a href="#">Formas de pagamento <span>›</span></a></li>
+                    <li><a href="#">Prazo de entrega <span>›</span></a></li>
+                    <li><a href="#">Acompanhe seu pedido <span>›</span></a></li>
+                    <li><a href="#">Pedido confirmado <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Minha conta</h3>
+                <ul>
+                    <li><a href="#">Minha conta <span>›</span></a></li>
+                    <li><a href="#">Meus pedidos <span>›</span></a></li>
+                    <li><a href="#">Meus favoritos <span>›</span></a></li>
+                    <li><a href="#">Meus dados <span>›</span></a></li>
+                    <li><a href="#">Endereços <span>›</span></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- MARCA: LOGO + MENSAGEM -->
+        <section class="marca-footer">
+            <div class="logo-rodape">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+            <div class="mensagem-marca">
+                <h2>Vista quem você é.<br>Vista NANABOROK.</h2>
+                <p>Mais que roupas, uma forma de expressão.</p>
+            </div>
+        </section>
+
+        <!-- BARRA INFERIOR CENTRALIZADA -->
+        <section class="barra-inferior">
+            <div class="seguranca-footer">
+                <span class="cadeado" aria-hidden="true">🔒</span>
+                <span>Loja 100% segura.</span>
+            </div>
+
+            <span class="separador-footer" aria-hidden="true">|</span>
+
+            <p>© 2026 onvit-e. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+</body>
+</html>
