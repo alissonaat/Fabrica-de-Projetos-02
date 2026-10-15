@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - NANABOROK</title>
+    <link rel="stylesheet" href="CSS/tela_perfil_cliente.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="topo">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+            <div class="pesquisa">
+                <span>🔍</span>
+                <input type="text" placeholder="Pesquise produtos e muito mais...">
+            </div>
+
+            <div class="acoes">
+                <button type="button" aria-label="Notificações">🔔</button>
+                <button type="button" aria-label="Carrinho">🛒</button>
+                <button type="button" class="perfil" aria-label="Perfil">👤</button>
+            </div>
+        </div>
+
+        <nav class="menu-principal">
+            <a href="#">Home</a>
+            <a href="#">Projetos</a>
+            <a href="#" class="personalizar">Personalize sua roupa</a>
+            <a href="#">Sobre nós</a>
+        </nav>
+
+        <nav class="menu">
+            <a href="#">Camisetas</a>
+            <a href="#">Jalecos</a>
+            <a href="#">Moletons</a>
+            <a href="#">Calças</a>
+            <a href="#">Bonés</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Novidades</a>
+            <a href="#">Promoções</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="perfil-cliente">
+
+        <!-- RESUMO DO PERFIL -->
+        <section class="resumo-perfil">
+
+            <div class="dados-usuario">
+                <div class="foto-usuario">👤</div>
+
+                <div class="informacoes-usuario">
+                    <h1>Usuário <span>✏️</span></h1>
+                    <p>usuario@nanaborok.com</p>
+                    <p>Membro desde março de 2024</p>
+                </div>
+            </div>
+
+            <div class="saldo-resumo">
+                <div class="informacoes-saldo">
+                    <p class="titulo-saldo">Saldo atual</p>
+                    <p class="valor-saldo">
+                        R$45,00 <span>NanaCash</span>
+                    </p>
+                </div>
+
+                <div class="icone-moedas">🪙</div>
+            </div>
+
+        </section>
+
+        <!-- PAINÉIS DO PERFIL -->
+        <section class="painel-perfil">
+
+            <!-- HISTÓRICO DE COMPRAS -->
+            <article class="card-perfil historico">
+
+                <div class="cabecalho-card">
+                    <div class="titulo-card">
+                        <span class="icone-card">📦</span>
+                        <h2>Histórico de compras</h2>
+                    </div>
+
+                    <a href="#">Ver todos</a>
+                </div>
+
+                <div class="lista-compras">
+
+                    <div class="item-compra">
+                        <div class="imagem-produto">
+                            <img src="img/camiseta_origem.png"
+                                 alt="Camiseta Origem">
+                        </div>
+
+                        <div class="detalhes-compra">
+                            <h3>Camiseta Origem</h3>
+                            <p>Pedido #12345</p>
+                            <p>15/05/2024</p>
+                        </div>
+
+                        <span class="status entregue">Entregue</span>
+                    </div>
+
+                    <div class="item-compra">
+                        <div class="imagem-produto">
+                            <img src="img/moletom_raizes.png"
+                                 alt="Moletom Raízes">
+                        </div>
+
+                        <div class="detalhes-compra">
+                            <h3>Moletom Raízes</h3>
+                            <p>Pedido #12310</p>
+                            <p>02/05/2024</p>
+                        </div>
+
+                        <span class="status transito">Em trânsito</span>
+                    </div>
+
+                    <div class="item-compra">
+                        <div class="imagem-produto">
+                            <img src="img/bone_manaborok.png"
+                                 alt="Boné Manaborok">
+                        </div>
+
+                        <div class="detalhes-compra">
+                            <h3>Boné Manaborok</h3>
+                            <p>Pedido #12280</p>
+                            <p>20/04/2024</p>
+                        </div>
+
+                        <span class="status entregue">Entregue</span>
+                    </div>
+
+                </div>
+
+                <a href="#" class="botao-card">
+                    Ver histórico completo
+                </a>
+
+            </article>
+
+            <!-- FAVORITOS -->
+            <article class="card-perfil favoritos">
+
+                <div class="cabecalho-card">
+                    <div class="titulo-card">
+                        <span class="icone-coracao">❤️</span>
+                        <h2>Favoritos</h2>
+                    </div>
+
+                    <a href="#">Ver todos</a>
+                </div>
+
+                <div class="grade-favoritos">
+
+                    <div class="item-favorito">
+                        <div class="imagem-favorito">
+                            <img src="img/camiseta_essencia.png"
+                                 alt="Camiseta Essência">
+                            <span class="coracao-favorito">♡</span>
+                        </div>
+
+                        <h3>Camiseta Essência</h3>
+                        <p>R$ 129,90</p>
+                    </div>
+
+                    <div class="item-favorito">
+                        <div class="imagem-favorito">
+                            <img src="img/camiseta_luz.png"
+                                 alt="Camiseta Luz">
+                            <span class="coracao-favorito">♡</span>
+                        </div>
+
+                        <h3>Camiseta Luz</h3>
+                        <p>R$ 119,90</p>
+                    </div>
+
+                    <div class="item-favorito">
+                        <div class="imagem-favorito">
+                            <img src="img/bone_nana.png"
+                                 alt="Boné NANA">
+                            <span class="coracao-favorito">♡</span>
+                        </div>
+
+                        <h3>Boné NANA</h3>
+                        <p>R$ 89,90</p>
+                    </div>
+
+                    <div class="item-favorito">
+                        <div class="imagem-favorito">
+                            <img src="img/moletom_nana.png"
+                                 alt="Moletom NANA">
+                            <span class="coracao-favorito">♡</span>
+                        </div>
+
+                        <h3>Moletom NANA</h3>
+                        <p>R$ 199,90</p>
+                    </div>
+
+                </div>
+
+                <a href="#" class="botao-card">
+                    Ver todos os favoritos
+                </a>
+
+            </article>
+
+            <!-- MEUS PROJETOS -->
+            <article class="card-perfil projetos">
+
+                <div class="cabecalho-card">
+                    <div class="titulo-card">
+                        <span class="icone-card">💡</span>
+                        <h2>Meus projetos</h2>
+                    </div>
+
+                    <a href="#">Ver todos</a>
+                </div>
+
+                <p class="descricao-projetos">
+                    Projetos da comunidade que você apoiou.
+                </p>
+
+                <div class="lista-projetos">
+
+                    <a href="#" class="item-projeto">
+                        <div class="imagem-projeto">
+                            <img src="img/projeto_jaqueta.png"
+                                 alt="Projeto Jaqueta Engenharia">
+                        </div>
+
+                        <div class="dados-projeto">
+                            <h3>Jaqueta Engenharia</h3>
+                            <p>Lalsinha01</p>
+
+                            <div class="barra-progresso">
+                                <span style="width: 78%;"></span>
+                            </div>
+
+                            <p class="porcentagem">78% da meta</p>
+                        </div>
+
+                        <span class="seta-projeto">›</span>
+                    </a>
+
+                    <a href="#" class="item-projeto">
+                        <div class="imagem-projeto">
+                            <img src="img/projeto_lenco.png"
+                                 alt="Projeto Lenço Florido Verde">
+                        </div>
+
+                        <div class="dados-projeto">
+                            <h3>Lenço Florido Verde</h3>
+                            <p>Altadaferzinhaizika</p>
+
+                            <div class="barra-progresso">
+                                <span style="width: 60%;"></span>
+                            </div>
+
+                            <p class="porcentagem">60% da meta</p>
+                        </div>
+
+                        <span class="seta-projeto">›</span>
+                    </a>
+
+                    <a href="#" class="item-projeto">
+                        <div class="imagem-projeto">
+                            <img src="img/projeto_vestido.png"
+                                 alt="Projeto Vestido Feminista">
+                        </div>
+
+                        <div class="dados-projeto">
+                            <h3>Vestido Feminista</h3>
+                            <p>PutseonNathan</p>
+
+                            <div class="barra-progresso">
+                                <span style="width: 88%;"></span>
+                            </div>
+
+                            <p class="porcentagem">88% da meta</p>
+                        </div>
+
+                        <span class="seta-projeto">›</span>
+                    </a>
+
+                </div>
+
+                <a href="#" class="botao-card">
+                    Ver todos os projetos
+                </a>
+
+            </article>
+
+            <!-- NANACASH -->
+            <article class="card-perfil nanacash">
+
+                <div class="cabecalho-card">
+                    <div class="titulo-card">
+                        <span class="icone-card">🪙</span>
+                        <h2>NANACASH</h2>
+                    </div>
+                </div>
+
+                <div class="conteudo-nanacash">
+
+                    <p class="titulo-saldo">Saldo atual</p>
+
+                    <p class="valor-saldo">
+                        R$45,00 <span>NanaCash</span>
+                    </p>
+
+                    <div class="aviso-nanacash">
+                        <span>💡</span>
+
+                        <p>
+                            Disponível para obter desconto
+                            em suas próximas compras.
+                        </p>
+                    </div>
+
+                    <a href="#" class="link-extrato">
+                        Ver extrato de transações
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <section class="beneficios">
+
+            <div class="beneficio">
+                <div class="beneficio-icone">
+                    <span>🚚</span>
+                </div>
+
+                <div>
+                    <h3>Entrega rápida</h3>
+                    <p>Seu pedido com agilidade<br>e segurança.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <div class="beneficio-icone">
+                    <img src="img/bandeira_brasil.png" alt="Brasil">
+                </div>
+
+                <div>
+                    <h3>Para todo o Brasil</h3>
+                    <p>Enviamos para todo o país<br>com praticidade.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <div class="beneficio-icone">
+                    <span>🔒</span>
+                </div>
+
+                <div>
+                    <h3>Compra segura</h3>
+                    <p>Seus dados protegidos<br>em todas as etapas.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <hr class="divisor-footer">
+
+        <section class="links-footer">
+
+            <div>
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Camisetas <span>›</span></a></li>
+                    <li><a href="#">Jalecos <span>›</span></a></li>
+                    <li><a href="#">Moletons <span>›</span></a></li>
+                    <li><a href="#">Calças <span>›</span></a></li>
+                    <li><a href="#">Bonés <span>›</span></a></li>
+                    <li><a href="#">Acessórios <span>›</span></a></li>
+                    <li><a href="#">Novidades <span>›</span></a></li>
+                    <li><a href="#">Promoções <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">Sobre a NANABOROK <span>›</span></a></li>
+                    <li><a href="#">Nossa missão <span>›</span></a></li>
+                    <li><a href="#">Envie uma ideia <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#">Central de ajuda <span>›</span></a></li>
+                    <li><a href="#">Trocas e devoluções <span>›</span></a></li>
+                    <li><a href="#">Formas de pagamento <span>›</span></a></li>
+                    <li><a href="#">Prazo de entrega <span>›</span></a></li>
+                    <li><a href="#">Acompanhe seu pedido <span>›</span></a></li>
+                    <li><a href="#">Pedido confirmado <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Minha conta</h3>
+                <ul>
+                    <li><a href="#">Minha conta <span>›</span></a></li>
+                    <li><a href="#">Meus pedidos <span>›</span></a></li>
+                    <li><a href="#">Meus favoritos <span>›</span></a></li>
+                    <li><a href="#">Meus dados <span>›</span></a></li>
+                    <li><a href="#">Endereços <span>›</span></a></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="marca-footer">
+
+            <div class="logo-rodape">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+            <div class="mensagem-marca">
+                <h2>Vista quem você é.<br>Vista NANABOROK.</h2>
+                <p>Mais que roupas, uma forma de expressão.</p>
+            </div>
+
+        </section>
+
+        <section class="barra-inferior">
+
+            <div class="seguranca-footer">
+                <span class="cadeado" aria-hidden="true">🔒</span>
+                <span>Loja 100% segura.</span>
+            </div>
+
+            <span class="separador-footer" aria-hidden="true">|</span>
+
+            <p>© 2026 onvit-e. Todos os direitos reservados.</p>
+
+        </section>
+
+    </footer>
+
+</body>
+</html>
