@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tela Cadastro de Conta</title>
+
+    <link rel="stylesheet" href="CSS/tela_cadastro_de_conta.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h1><span>on</span>vit-e</h1>
+    </header>
+
+    <main class="painel-cadastro">
+
+        <section class="conteudo-cadastro">
+
+            <div class="titulo-cadastro">
+                <h2>Crie sua conta <span>onvit-e</span></h2>
+
+                <p>
+                    Cadastre-se para acompanhar seus pedidos e ter uma
+                    experiência mais completa na NANABOROK.
+                </p>
+            </div>
+
+            <form action="#" method="post">
+
+                <div class="campos-cadastro">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email"
+                               autocomplete="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone"
+                               autocomplete="tel" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf"
+                               autocomplete="off" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha"
+                               autocomplete="new-password" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmarSenha">Confirme sua senha</label>
+                        <input type="password" id="confirmarSenha"
+                               name="confirmarSenha"
+                               autocomplete="new-password" required>
+                    </div>
+
+                </div>
+
+                <div class="termos">
+
+                    <input type="checkbox" id="termos" name="termos" required>
+
+                    <label for="termos">
+                        Li e concordo com os
+                        <a href="#">Termos de Uso</a>
+                        e a
+                        <a href="#">Política de Privacidade</a>
+                    </label>
+
+                </div>
+
+                <button type="submit" class="botao-cadastro">
+                    CRIAR CONTA
+                </button>
+
+            </form>
+
+        </section>
+
+        <aside class="login-social">
+
+            <h2>Entre rapidamente com:</h2>
+
+            <button type="button" class="botao-social google">
+                <img src="img/Google.png" alt="" class="icone-social">
+                <span>Continuar com o Google</span>
+            </button>
+
+            <button type="button" class="botao-social facebook">
+                <img src="img/facebook.png" alt="" class="icone-social">
+                <span>Continuar com o Facebook</span>
+            </button>
+
+            <button type="button" class="botao-social apple">
+                <img src="img/apple.png" alt="" class="icone-social">
+                <span>Continuar com a Apple</span>
+            </button>
+
+            <div class="logo-lateral">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer class="rodape">
+        <p>© 2026 onvi-e. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
