@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Pesquisa - NANABOROK</title>
+    <link rel="stylesheet" href="CSS/tela_de_pesquisa.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="topo">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+            <div class="pesquisa">
+                <span>🔍</span>
+                <input type="text" placeholder="Pesquise produtos e muito mais...">
+            </div>
+
+            <div class="acoes">
+                <button type="button" aria-label="Notificações">🔔</button>
+                <button type="button" aria-label="Carrinho">🛒</button>
+                <button type="button" class="perfil" aria-label="Perfil">👤</button>
+            </div>
+        </div>
+
+        <nav class="menu-principal">
+            <a href="#">Home</a>
+            <a href="#">Projetos</a>
+            <a href="#" class="personalizar">Personalize sua roupa</a>
+            <a href="#">Sobre nós</a>
+        </nav>
+
+        <nav class="menu">
+            <a href="#">Camisetas</a>
+            <a href="#">Jalecos</a>
+            <a href="#">Moletons</a>
+            <a href="#">Calças</a>
+            <a href="#">Bonés</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Novidades</a>
+            <a href="#">Promoções</a>
+        </nav>
+    </header>
+
+    <!-- MAIN (CONTEÚDO PRINCIPAL + FILTROS + 08 PRODUTOS + PAGINAÇÃO) -->
+    <main class="container-pesquisa">
+        <!-- BARRA LATERAL DE FILTROS -->
+        <aside class="filtros-sidebar">
+            <div class="filtros-header">
+                <h3><span>⚙️</span> Filtros</h3>
+                <a href="#" class="limpar-tudo">Limpar tudo</a>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Categoria</h4>
+                <label class="checkbox-container">
+                    <input type="checkbox" checked> Camisetas
+                    <span class="quantidade">(48)</span>
+                </label>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Tamanho</h4>
+                <label class="checkbox-container"><input type="checkbox"> P <span class="quantidade">(12)</span></label>
+                <label class="checkbox-container"><input type="checkbox"> M <span class="quantidade">(12)</span></label>
+                <label class="checkbox-container"><input type="checkbox"> G <span class="quantidade">(12)</span></label>
+                <label class="checkbox-container"><input type="checkbox"> GG <span class="quantidade">(12)</span></label>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Cor</h4>
+                <div class="paleta-cores">
+                    <span class="cor" style="background: #ffffff; border: 1px solid #ccc;"></span>
+                    <span class="cor" style="background: #000000;"></span>
+                    <span class="cor" style="background: #1b2a4a;"></span>
+                    <span class="cor" style="background: #7d8b9b;"></span>
+                    <span class="cor" style="background: #e8ded1;"></span>
+                    <span class="mais-cores">+3</span>
+                </div>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Faixa de preço</h4>
+                <div class="slider-preco">
+                    <input type="range" min="39.90" max="199.90" value="199.90">
+                    <div class="valores-preco">
+                        <span>R$ 39,90</span>
+                        <span>R$ 199,90</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Disponibilidade</h4>
+                <label class="checkbox-container">
+                    <input type="checkbox" checked> Em estoque
+                    <span class="quantidade">(48)</span>
+                </label>
+            </div>
+
+            <div class="grupo-filtro">
+                <h4>Avaliação</h4>
+                <label class="checkbox-container"><input type="checkbox"> ⭐⭐⭐⭐⭐ <span class="quantidade">(20)</span></label>
+                <label class="checkbox-container"><input type="checkbox"> ⭐⭐⭐⭐☆ <span class="quantidade">(16)</span></label>
+                <label class="checkbox-container"><input type="checkbox"> ⭐⭐⭐☆☆ <span class="quantidade">(8)</span></label>
+                <label class="checkbox-container"><input type="checkbox"> ⭐⭐☆☆☆ <span class="quantidade">(4)</span></label>
+            </div>
+        </aside>
+
+        <!-- ÁREA DE RESULTADOS DA PESQUISA -->
+        <section class="conteudo-resultados">
+            <!-- CABEÇALHO DA RESULTADOS -->
+            <div class="header-resultados">
+                <div class="titulo-busca">
+                    <h2>Resultados para: <span>camiseta</span></h2>
+                    <p class="contador-produtos">48 produtos encontrados</p>
+                </div>
+
+                <div class="ordenacao-e-tags">
+                    <div class="ordenar-por">
+                        <label>Ordenar por:</label>
+                        <select>
+                            <option>Mais relevantes</option>
+                            <option>Mais recentes</option>
+                            <option>Menor preço</option>
+                            <option>Maior preço</option>
+                        </select>
+                    </div>
+                    <div class="botoes-ordenacao-rapida">
+                        <button class="btn-tag active">Mais relevantes</button>
+                        <button class="btn-tag">Mais recentes</button>
+                        <button class="btn-tag">Menor preço</button>
+                        <button class="btn-tag">Maior preço</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRID DE 08 PRODUTOS -->
+            <div class="grid-produtos">
+                <!-- PRODUTO 1 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <img src="img/roupa1.jpg" alt="Camiseta Básica Algodão">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Básica Algodão</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(124)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 59,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 2 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <span class="badge-desconto">-20%</span>
+                        <img src="img/roupa2.jpg" alt="Camiseta Oversized Preta">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Oversized Preta</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(89)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 79,90</span>
+                            <span class="preco-antigo">R$ 99,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 3 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <img src="img/roupa3.jpg" alt="Camiseta Estampada Natureza">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Estampada Natureza</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(64)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 69,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 4 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <img src="img/roupa4.jpg" alt="Camiseta Premium Pima">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Premium Pima</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(42)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 129,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 5 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <img src="img/roupa5.jpg" alt="Camiseta Minimalista Off-White">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Minimalista Off-White</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(53)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 84,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 6 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <span class="badge-desconto">-15%</span>
+                        <img src="img/roupa6.jpg" alt="Camiseta Gola Alta Cinza">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Gola Alta Cinza</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(31)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 75,50</span>
+                            <span class="preco-antigo">R$ 89,00</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 7 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <img src="img/roupa7.jpg" alt="Camiseta Streetwear Graphic">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Streetwear Graphic</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(77)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 94,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 8 -->
+                <article class="card-produto">
+                    <div class="imagem-container">
+                        <img src="img/roupa8.jpg" alt="Camiseta Regata Esportiva">
+                        <button class="btn-favorito" aria-label="Adicionar aos favoritos">🤍</button>
+                        <button class="btn-espiar" aria-label="Espiar produto">👁️</button>
+                        <button class="btn-carrinho" aria-label="Adicionar ao carrinho">🛒</button>
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Regata Esportiva</h3>
+                        <p class="categoria-produto">Camisetas</p>
+                        <div class="avaliacao">
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            <span class="num-avaliacoes">(19)</span>
+                        </div>
+                        <div class="precos">
+                            <span class="preco-atual">R$ 49,90</span>
+                        </div>
+                        <span class="status-estoque em-estoque">● Em estoque</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- PAGINAÇÃO -->
+            <div class="paginacao">
+                <button type="button" class="btn-paginacao anterior" disabled aria-label="Página anterior">‹</button>
+                <div class="paginas-numeros">
+                    <button type="button" class="pagina-num active">1</button>
+                    <button type="button" class="pagina-num">2</button>
+                    <button type="button" class="pagina-num">3</button>
+                    <span class="reticencias">...</span>
+                    <button type="button" class="pagina-num">6</button>
+                </div>
+                <button type="button" class="btn-paginacao proximo" aria-label="Próxima página">›</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <!-- BENEFÍCIOS -->
+        <section class="beneficios">
+            <div class="beneficio">
+                <div class="beneficio-icone"><span>🚚</span></div>
+                <div>
+                    <h3>Entrega rápida</h3>
+                    <p>Seu pedido com agilidade<br>e segurança.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <div class="beneficio-icone">
+                    <img src="img/bandeira_brasil.png" alt="Brasil">
+                </div>
+                <div>
+                    <h3>Para todo o Brasil</h3>
+                    <p>Enviamos para todo o país<br>com praticidade.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <div class="beneficio-icone"><span>🔒</span></div>
+                <div>
+                    <h3>Compra segura</h3>
+                    <p>Seus dados protegidos<br>em todas as etapas.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisor-footer">
+
+        <!-- LINKS DO RODAPÉ -->
+        <section class="links-footer">
+            <div>
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Camisetas <span>›</span></a></li>
+                    <li><a href="#">Jalecos <span>›</span></a></li>
+                    <li><a href="#">Moletons <span>›</span></a></li>
+                    <li><a href="#">Calças <span>›</span></a></li>
+                    <li><a href="#">Bonés <span>›</span></a></li>
+                    <li><a href="#">Acessórios <span>›</span></a></li>
+                    <li><a href="#">Novidades <span>›</span></a></li>
+                    <li><a href="#">Promoções <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">Sobre a NANABOROK <span>›</span></a></li>
+                    <li><a href="#">Nossa missão <span>›</span></a></li>
+                    <li><a href="#">Envie uma ideia <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><a href="#">Central de ajuda <span>›</span></a></li>
+                    <li><a href="#">Trocas e devoluções <span>›</span></a></li>
+                    <li><a href="#">Formas de pagamento <span>›</span></a></li>
+                    <li><a href="#">Prazo de entrega <span>›</span></a></li>
+                    <li><a href="#">Acompanhe seu pedido <span>›</span></a></li>
+                    <li><a href="#">Pedido confirmado <span>›</span></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Minha conta</h3>
+                <ul>
+                    <li><a href="#">Minha conta <span>›</span></a></li>
+                    <li><a href="#">Meus pedidos <span>›</span></a></li>
+                    <li><a href="#">Meus favoritos <span>›</span></a></li>
+                    <li><a href="#">Meus dados <span>›</span></a></li>
+                    <li><a href="#">Endereços <span>›</span></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- MARCA DO RODAPÉ -->
+        <section class="marca-footer">
+            <div class="logo-rodape">
+                <img src="img/logo.png" alt="Logo NANABOROK">
+            </div>
+
+            <div class="mensagem-marca">
+                <h2>Vista quem você é.<br>Vista NANABOROK.</h2>
+                <p>Mais que roupas, uma forma de expressão.</p>
+            </div>
+        </section>
+
+        <!-- BARRA INFERIOR -->
+        <section class="barra-inferior">
+            <div class="seguranca-footer">
+                <span class="cadeado" aria-hidden="true">🔒</span>
+                <span>Loja 100% segura.</span>
+            </div>
+
+            <span class="separador-footer" aria-hidden="true">|</span>
+
+            <p>© 2026 onvit-e. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+</body>
+</html>
