@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Onvit-e | Adicionar Produto</title>
+
+    <link rel="stylesheet" href="CSS/novo_produto.css">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            onvit-e
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item">
+                <i data-lucide="house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="menu-item active">
+                <i data-lucide="package"></i>
+                <span>Produtos</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="badge-check"></i>
+                <span>Aprovações</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="hand-coins"></i>
+                <span>Relatórios</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="top-header">
+
+            <div class="page-title">
+
+                <i data-lucide="plus"></i>
+
+                <h1>Adicionar novo produto</h1>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="profile-logo">
+
+                    <img src="IMG/logo.png"
+                         alt="Logo NANABOROK">
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>NANABOROK</strong>
+
+                    <span>Minha conta</span>
+
+                </div>
+
+                <i data-lucide="chevron-down"></i>
+
+            </div>
+
+        </header>
+
+        <form class="product-form" id="product-form">
+
+            <h2>Informações do produto</h2>
+
+
+            <div class="form-grid">
+
+
+                <div class="image-section">
+
+                    <label>Imagem do Produto</label>
+
+                    <label for="product-image" class="upload-area">
+
+                        <i data-lucide="cloud-upload"></i>
+
+                        <span>
+                            Arraste uma imagem ou clique
+                            para enviar PNG, JPG (máx. 5MB)
+                        </span>
+
+                        <img id="image-preview"
+                             alt="Prévia da imagem">
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="product-image"
+                        name="imagem"
+                        accept="image/png, image/jpeg"
+                        hidden
+                    >
+
+                    <div class="additional-images">
+
+                        <label class="image-box">
+                            <input
+                                type="file"
+                                name="imagens_adicionais[]"
+                                accept="image/png,image/jpeg"
+                                hidden
+                            >
+                        </label>
+
+                        <label class="image-box">
+                            <input
+                                type="file"
+                                name="imagens_adicionais[]"
+                                accept="image/png,image/jpeg"
+                                hidden
+                            >
+                        </label>
+
+                        <label class="image-box">
+                            <input
+                                type="file"
+                                name="imagens_adicionais[]"
+                                accept="image/png,image/jpeg"
+                                hidden
+                            >
+                        </label>
+
+                        <label class="image-box">
+                            <input
+                                type="file"
+                                name="imagens_adicionais[]"
+                                accept="image/png,image/jpeg"
+                                hidden
+                            >
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-information">
+
+                    <div class="form-group">
+
+                        <label for="product-name">
+                            Nome do Produto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="product-name"
+                            name="nome"
+                            placeholder="Digite o nome do produto"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="product-description">
+                            Descrição do Produto
+                        </label>
+
+                        <textarea
+                            id="product-description"
+                            name="descricao"
+                            placeholder="Descreva o produto..."
+                        ></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="product-category">
+                            Categoria
+                        </label>
+
+                        <select
+                            id="product-category"
+                            name="categoria"
+                            required
+                        >
+
+                            <option value="" disabled selected>
+                                Selecione uma categoria
+                            </option>
+
+                            <option value="camisetas">Camisetas</option>
+
+                            <option value="jalecos">Jalecos</option>
+
+                            <option value="moletons">Moletons</option>
+
+                            <option value="calcas">Calças</option>
+
+                            <option value="bones">Bonés</option>
+
+                            <option value="acessorios">Acessórios</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group price-group">
+
+                    <label for="product-price">
+                        Preço
+                    </label>
+
+                    <input
+                        type="number"
+                        id="product-price"
+                        name="preco"
+                        placeholder="0,00"
+                        step="0.01"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group stock-group">
+
+                    <label for="product-stock">
+                        Estoque
+                    </label>
+
+                    <input
+                        type="number"
+                        id="product-stock"
+                        name="estoque"
+                        placeholder="Quantidade"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group size-group">
+
+                    <label>Tamanho</label>
+
+                    <div class="multi-select" id="size-select">
+
+                        <button
+                            type="button"
+                            class="multi-select-button"
+                            aria-expanded="false"
+                            aria-controls="size-options"
+                        >
+
+                            <span class="selected-text">
+                                Selecione os tamanhos
+                            </span>
+
+                            <i data-lucide="chevron-down"></i>
+
+                        </button>
+
+                        <div
+                            class="multi-select-options"
+                            id="size-options"
+                            hidden
+                        >
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="PP"
+                                >
+                                <span>PP</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="P"
+                                >
+                                <span>P</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="M"
+                                >
+                                <span>M</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="G"
+                                >
+                                <span>G</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="GG"
+                                >
+                                <span>GG</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="G1"
+                                >
+                                <span>G1</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="G2"
+                                >
+                                <span>G2</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="G3"
+                                >
+                                <span>G3</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="tamanho[]"
+                                    value="Babylook"
+                                >
+                                <span>Babylook</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group color-group">
+
+                    <label>Cores</label>
+
+                    <div class="multi-select" id="color-select">
+
+                        <button
+                            type="button"
+                            class="multi-select-button"
+                            aria-expanded="false"
+                            aria-controls="color-options"
+                        >
+
+                            <span class="selected-text">
+                                Selecione as cores
+                            </span>
+
+                            <i data-lucide="chevron-down"></i>
+
+                        </button>
+
+                        <div
+                            class="multi-select-options"
+                            id="color-options"
+                            hidden
+                        >
+                            <label title="Branco">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Branco"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #ffffff"
+                                ></span>
+                            </label>
+
+
+                            <label title="Preto">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Preto"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #222222"
+                                ></span>
+                            </label>
+
+
+                            <label title="Cinza">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Cinza"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #888888"
+                                ></span>
+                            </label>
+
+                            <label title="Amarelo">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Amarelo"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #ffed00"
+                                ></span>
+                            </label>
+
+
+                            <label title="Amarelo escuro">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Amarelo-escuro"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #f5a800"
+                                ></span>
+                            </label>
+
+
+                            <label title="Laranja">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Laranja"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #f58220"
+                                ></span>
+                            </label>
+
+
+                            <label title="Vermelho">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Vermelho"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #e31e24"
+                                ></span>
+                            </label>
+
+
+                            <label title="Rosa">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Rosa"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #ec78a8"
+                                ></span>
+                            </label>
+
+
+                            <label title="Rosa claro">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Rosa-claro"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #f6b8ce"
+                                ></span>
+                            </label>
+
+
+                            <label title="Roxo">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Roxo"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #7b3f98"
+                                ></span>
+                            </label>
+
+
+                            <label title="Azul claro">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Azul-claro"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #55c5e9"
+                                ></span>
+                            </label>
+
+
+                            <label title="Azul escuro">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Azul-escuro"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #164b9b"
+                                ></span>
+                            </label>
+
+
+                            <label title="Verde claro">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Verde-claro"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #8cc63e"
+                                ></span>
+                            </label>
+
+
+                            <label title="Verde escuro">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Verde-escuro"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #168443"
+                                ></span>
+                            </label>
+
+
+                            <label title="Marrom">
+                                <input
+                                    type="checkbox"
+                                    name="cor[]"
+                                    value="Marrom"
+                                >
+
+                                <span
+                                    class="color-circle"
+                                    style="--swatch: #8b5a2b"
+                                ></span>
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="highlight-section">
+
+                    <label>Produto em destaque</label>
+
+                    <div class="highlight-option">
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="product-highlight"
+                                name="destaque"
+                                value="1"
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                        <span>Destacar esse produto</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="btn-cancel"
+                    id="btn-cancel"
+                >
+
+                    <i data-lucide="x"></i>
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn-publish"
+                >
+
+                    <i data-lucide="send"></i>
+
+                    Publicar produto
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+</div>
+
+
+
+<script>
+
+    lucide.createIcons();
+
+    const imageInput = document.getElementById("product-image");
+
+    const imagePreview = document.getElementById("image-preview");
+
+    const uploadArea = document.querySelector(".upload-area");
+
+
+    function previewImage(file) {
+
+        if (!file) return;
+
+        if (!["image/png", "image/jpeg"].includes(file.type)) {
+
+            alert("Envie apenas imagens PNG ou JPG.");
+
+            return;
+
+        }
+
+        if (file.size > 5 * 1024 * 1024) {
+
+            alert("A imagem deve ter no máximo 5MB.");
+
+            return;
+
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+
+            imagePreview.src = event.target.result;
+
+            imagePreview.style.display = "block";
+
+            uploadArea.classList.add("has-image");
+
+        };
+
+        reader.readAsDataURL(file);
+
+    }
+
+
+    imageInput.addEventListener("change", function () {
+
+        previewImage(this.files[0]);
+
+    });
+
+
+    uploadArea.addEventListener("dragover", function (event) {
+
+        event.preventDefault();
+
+        uploadArea.classList.add("dragging");
+
+    });
+
+
+    uploadArea.addEventListener("dragleave", function () {
+
+        uploadArea.classList.remove("dragging");
+
+    });
+
+
+    uploadArea.addEventListener("drop", function (event) {
+
+        event.preventDefault();
+
+        uploadArea.classList.remove("dragging");
+
+        previewImage(event.dataTransfer.files[0]);
+
+    });
+
+
+    const multiSelects = document.querySelectorAll(".multi-select");
+
+
+    multiSelects.forEach(function (select) {
+
+        const button = select.querySelector(".multi-select-button");
+
+        const options = select.querySelector(".multi-select-options");
+
+        const selectedText = select.querySelector(".selected-text");
+
+        const checkboxes = options.querySelectorAll(
+            'input[type="checkbox"]'
+        );
+
+
+        button.addEventListener("click", function () {
+
+            const isOpen = !options.hidden;
+
+            multiSelects.forEach(function (otherSelect) {
+
+                if (otherSelect !== select) {
+
+                    const otherOptions = otherSelect.querySelector(
+                        ".multi-select-options"
+                    );
+
+                    const otherButton = otherSelect.querySelector(
+                        ".multi-select-button"
+                    );
+
+                    otherOptions.hidden = true;
+
+                    otherButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            });
+
+            options.hidden = isOpen;
+
+            button.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+        });
+
+        checkboxes.forEach(function (checkbox) {
+
+            checkbox.addEventListener("change", function () {
+
+                const selected = Array.from(checkboxes)
+
+                    .filter(function (item) {
+
+                        return item.checked;
+
+                    })
+
+                    .map(function (item) {
+
+                        return item.value;
+
+                    });
+
+
+                if (selected.length > 0) {
+
+                    selectedText.textContent = selected.join(", ");
+
+                } else {
+
+                    selectedText.textContent =
+                        select.id === "size-select"
+                            ? "Selecione os tamanhos"
+                            : "Selecione as cores";
+
+                }
+
+            });
+
+        });
+
+    });
+
+    document.addEventListener("click", function (event) {
+
+        multiSelects.forEach(function (select) {
+
+            if (!select.contains(event.target)) {
+
+                const options = select.querySelector(
+                    ".multi-select-options"
+                );
+
+                const button = select.querySelector(
+                    ".multi-select-button"
+                );
+
+                options.hidden = true;
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        });
+
+    });
+
+
+    document.getElementById("btn-cancel").addEventListener(
+        "click",
+        function () {
+
+            const confirmar = confirm(
+                "Deseja cancelar o cadastro do produto?"
+            );
+
+            if (confirmar) {
+
+                document.getElementById("product-form").reset();
+
+                imagePreview.src = "";
+
+                imagePreview.style.display = "none";
+
+                uploadArea.classList.remove("has-image");
+
+                multiSelects.forEach(function (select) {
+
+                    select.querySelector(
+                        ".multi-select-options"
+                    ).hidden = true;
+
+                    select.querySelector(
+                        ".multi-select-button"
+                    ).setAttribute("aria-expanded", "false");
+
+                    select.querySelector(
+                        ".selected-text"
+                    ).textContent =
+                        select.id === "size-select"
+                            ? "Selecione os tamanhos"
+                            : "Selecione as cores";
+
+                });
+
+            }
+
+        }
+    );
+
+    const productForm = document.getElementById("product-form");
+
+
+    productForm.addEventListener("submit", function (event) {
+
+        const tamanhos = document.querySelectorAll(
+            'input[name="tamanho[]"]:checked'
+        );
+
+        const cores = document.querySelectorAll(
+            'input[name="cor[]"]:checked'
+        );
+
+
+        if (tamanhos.length === 0) {
+
+            event.preventDefault();
+
+            alert("Selecione pelo menos um tamanho.");
+
+            return;
+
+        }
+
+
+        if (cores.length === 0) {
+
+            event.preventDefault();
+
+            alert("Selecione pelo menos uma cor.");
+
+            return;
+
+        }
+
+    });
+
+
+</script>
+
+</body>
+</html>
