@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Onvit-e | Produtos</title>
+
+    <link rel="stylesheet" href="CSS/produtos.css">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            onvit-e
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item">
+                <i data-lucide="house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="menu-item active">
+                <i data-lucide="package"></i>
+                <span>Produtos</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="badge-check"></i>
+                <span>Aprovações</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="hand-coins"></i>
+                <span>Relatórios</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="top-header">
+
+            <div class="page-title">
+
+                <i data-lucide="package"></i>
+
+                <h1>Produtos</h1>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="profile-logo">
+
+                    <img src="IMG/logo.png"
+                         alt="Logo NANABOROK">
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>NANABOROK</strong>
+                    <span>Minha conta</span>
+
+                </div>
+
+                <i data-lucide="chevron-down"></i>
+
+            </div>
+
+        </header>
+
+        <section class="toolbar">
+
+            <div class="filters">
+
+                <div class="search-box">
+
+                    <input
+                        type="search"
+                        placeholder="Pesquisar produtos"
+                        aria-label="Pesquisar produtos">
+
+                </div>
+
+
+                <div class="category-filter">
+
+                    <select aria-label="Filtrar por categoria">
+
+                        <option value="">Todas as categorias</option>
+                        <option value="camiseta">Camiseta</option>
+                        <option value="calca">Calça</option>
+                        <option value="jaleco">Jaleco</option>
+                        <option value="acessorios">Acessórios</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <a href="#" class="add-product">
+
+                <i data-lucide="plus"></i>
+
+                <span>Adicionar produto</span>
+
+            </a>
+
+        </section>
+
+        <section class="products-section">
+
+            <div class="table-container">
+
+                <table class="products-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Estoque</th>
+                            <th>Status</th>
+                            <th>Data de publicação</th>
+                            <th>Ações</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Camisa básica</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Camiseta manga longa</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Jaleco Listrado</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Blusinha básica</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Camisa listrada</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Blusinha listrada</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="product-name">
+                                <strong>Jaqueta Quadriculada</strong>
+                                <span>Algodão premium</span>
+                            </td>
+
+                            <td>
+                                <span class="category-tag">Camiseta</span>
+                            </td>
+
+                            <td>R$ 89,90</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <span class="status published">
+                                    ✓ Publicado
+                                </span>
+                            </td>
+
+                            <td>10/05/2026</td>
+
+                            <td class="actions">
+
+                                <a href="#">
+                                    <i data-lucide="pencil"></i>
+                                    Editar
+                                </a>
+
+                                <a href="#">
+                                    <i data-lucide="eye"></i>
+                                    Ver produto
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

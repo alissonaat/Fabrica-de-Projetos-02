@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onvit-e | Dashboard</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            onvit-e
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item active">
+                <i data-lucide="house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="package"></i>
+                <span>Produtos</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="badge-check"></i>
+                <span>Aprovações</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="hand-coins"></i>
+                <span>Relatórios</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="header">
+
+            <div class="welcome">
+
+                <h1>
+                    Olá, Nanaborok seja bem-vindo<br>
+                    ao seu dashboard
+                </h1>
+
+                <p>
+                    Acompanhe seus dados e gerencie sua loja com facilidade.
+                </p>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="profile-logo">
+
+                    <img src="IMG/logo.png"
+                         alt="Logo NANABOROK">
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>NANABOROK</strong>
+                    <span>Minha conta</span>
+
+                </div>
+
+                <i data-lucide="chevron-down"></i>
+
+            </div>
+
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Produtos ativos</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">07</div>
+                <div class="stat-label">Aprovações pendentes</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">09</div>
+                <div class="stat-label">Vendas no período</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Visitas à vitrine</div>
+            </div>
+
+        </section>
+
+        <section class="dashboard-grid">
+
+            <div class="activities">
+
+                <h2>Atividades recentes</h2>
+
+                <div class="activity-list">
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            <i data-lucide="shopping-cart"></i>
+                        </div>
+
+                        <div class="activity-info">
+                            <strong>Novo pedido recebido</strong>
+                            <p>Pedido #12345 realizado com sucesso.</p>
+                        </div>
+
+                        <span class="activity-time">Há 15 min</span>
+
+                        <i data-lucide="chevron-right" class="arrow"></i>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon warning">
+                            <i data-lucide="triangle-alert"></i>
+                        </div>
+
+                        <div class="activity-info">
+                            <strong>Aprovação pendente</strong>
+                            <p>Produto "Camiseta Básica" aguarda sua revisão.</p>
+                        </div>
+
+                        <span class="activity-time">Há 1 h</span>
+
+                        <i data-lucide="chevron-right" class="arrow"></i>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            <i data-lucide="circle-check"></i>
+                        </div>
+
+                        <div class="activity-info">
+                            <strong>Produto atualizado</strong>
+                            <p>Informações do produto "Tênis Esportivo" foram alteradas.</p>
+                        </div>
+
+                        <span class="activity-time">Há 3 h</span>
+
+                        <i data-lucide="chevron-right" class="arrow"></i>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            <i data-lucide="clipboard-list"></i>
+                        </div>
+
+                        <div class="activity-info">
+                            <strong>Relatório disponível</strong>
+                            <p>Seu relatório de vendas do período está pronto.</p>
+                        </div>
+
+                        <span class="activity-time">Há 1 dia</span>
+
+                        <i data-lucide="chevron-right" class="arrow"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="quick-access">
+
+                <h2>Acesso rápido</h2>
+
+                <a href="#" class="quick-button">
+                    <i data-lucide="plus"></i>
+                    <span>Adicionar produto</span>
+                </a>
+
+                <a href="#" class="quick-button">
+                    <i data-lucide="refresh-cw"></i>
+                    <span>Revisar aprovações</span>
+                </a>
+
+                <a href="#" class="quick-button">
+                    <i data-lucide="eye"></i>
+                    <span>Ver relatórios</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
