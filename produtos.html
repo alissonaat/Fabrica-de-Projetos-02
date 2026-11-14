@@ -438,6 +438,30 @@
 
                 </table>
 
+                <div class="pagination-container">
+
+                        <span class="pagination-info" id="pagination-info">
+                            Mostrando 1 a 7
+                        </span>
+
+                        <div class="pagination-controls">
+
+                            <button class="pagination-arrow" id="prev-page" aria-label="Página anterior">
+                                <i data-lucide="chevron-left"></i>
+                            </button>
+
+                            <button class="pagination-number active" id="current-page">
+                                1
+                            </button>
+
+                            <button class="pagination-arrow" id="next-page" aria-label="Próxima página">
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
             </div>
 
         </section>
@@ -447,7 +471,106 @@
 </div>
 
 <script>
+
     lucide.createIcons();
+
+    const rows = Array.from(
+        document.querySelectorAll(
+            '.suggestions-table tbody tr'
+        )
+    );
+
+    const rowsPerPage = 7;
+
+    let currentPage = 1;
+
+    const totalPages = Math.ceil(
+        rows.length / rowsPerPage
+    );
+
+    const paginationInfo = document.getElementById(
+        'pagination-info'
+    );
+
+    const currentPageButton = document.getElementById(
+        'current-page'
+    );
+
+    const prevButton = document.getElementById(
+        'prev-page'
+    );
+
+    const nextButton = document.getElementById(
+        'next-page'
+    );
+
+
+    function updatePagination() {
+
+        const start = (currentPage - 1) * rowsPerPage;
+
+        const end = start + rowsPerPage;
+
+        rows.forEach((row, index) => {
+
+            row.style.display =
+                index >= start && index < end
+                    ? ''
+                    : 'none';
+
+        });
+
+
+        const firstItem = rows.length === 0
+            ? 0
+            : start + 1;
+
+        const lastItem = Math.min(
+            end,
+            rows.length
+        );
+
+        paginationInfo.textContent =
+            `Mostrando ${firstItem} a ${lastItem}`;
+
+
+        currentPageButton.textContent = currentPage;
+
+
+        prevButton.disabled = currentPage === 1;
+
+        nextButton.disabled = currentPage >= totalPages;
+
+    }
+
+    prevButton.addEventListener('click', () => {
+
+        if (currentPage > 1) {
+
+            currentPage--;
+
+            updatePagination();
+
+        }
+
+    });
+
+
+    nextButton.addEventListener('click', () => {
+
+        if (currentPage < totalPages) {
+
+            currentPage++;
+
+            updatePagination();
+
+        }
+
+    });
+
+
+    updatePagination();
+
 </script>
 
 </body>

@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -33,19 +34,27 @@ select {
     font-family: inherit;
 }
 
+
 .dashboard {
     display: flex;
     min-height: 100vh;
     width: 100%;
 }
 
+
 .sidebar {
     width: 270px;
     min-width: 270px;
     min-height: 100vh;
+
     background: var(--navy);
+
     padding: 52px 27px;
+
     color: white;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
@@ -71,6 +80,7 @@ select {
     border-radius: 6px;
     font-size: 15px;
     font-weight: 600;
+    color: white;
     transition: .2s;
 }
 
@@ -88,19 +98,25 @@ select {
     background: var(--blue);
 }
 
+
 .main-content {
     flex: 1;
     min-width: 0;
-    padding: 32px 35px 40px 43px;
+
+    padding: 55px 35px 40px 43px;
 }
+
 
 .top-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 10px;
+
     width: 100%;
-    min-height: 48px;
-    margin-bottom: 25px;
 }
 
 .page-title {
@@ -122,56 +138,67 @@ select {
     color: #08084b;
 }
 
+
 .user-profile {
     display: flex;
     align-items: center;
-    gap: 12px;
-    white-space: nowrap;
+    gap: 10px;
+
+    position: relative;
+    top: -25px;
+
     margin-left: auto;
-    margin-top: -8px;
+
+    white-space: nowrap;
 }
 
 .profile-logo {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
+
     border-radius: 50%;
     overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+
+    border: 1px solid #e5eaf0;
+    background: #ffffff;
+
     flex-shrink: 0;
 }
 
 .profile-logo img {
     width: 100%;
     height: 100%;
+
     object-fit: contain;
 }
 
 .profile-info {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
 }
 
 .profile-info strong {
-    color: #08084b;
-    font-size: 16px;
+    color: var(--dark-blue);
+    font-size: 13px;
     font-weight: 700;
 }
 
 .profile-info span {
-    color: #555577;
-    font-size: 14px;
+    color: var(--gray);
+    font-size: 12px;
 }
 
 .user-profile > svg {
-    width: 23px;
-    height: 23px;
+    width: 17px;
+    height: 17px;
     color: #999;
-    margin-left: 15px;
 }
+
 
 .product-form {
     width: 100%;
@@ -186,10 +213,14 @@ select {
 
 .form-grid {
     display: grid;
+
     grid-template-columns: repeat(6, minmax(0, 1fr));
+
     column-gap: 14px;
     row-gap: 15px;
+
     width: 100%;
+
     align-items: start;
 }
 
@@ -204,9 +235,12 @@ select {
 .image-section > label:first-child,
 .highlight-section > label {
     display: block;
+
     font-size: 16px;
     font-weight: 400;
+
     color: #08084b;
+
     margin-bottom: 6px;
 }
 
@@ -214,11 +248,15 @@ select {
 .form-group textarea,
 .form-group select {
     width: 100%;
+
     border: 1px solid #aaa;
     border-radius: 5px;
+
     outline: none;
+
     background: white;
     color: var(--text);
+
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
 }
@@ -257,10 +295,12 @@ select {
 
 .upload-area {
     position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     gap: 12px;
 
     width: 100%;
@@ -271,6 +311,7 @@ select {
 
     cursor: pointer;
     overflow: hidden;
+
     transition: .2s;
 }
 
@@ -283,24 +324,32 @@ select {
 .upload-area > svg {
     width: 65px;
     height: 65px;
+
     color: #999;
+
     stroke-width: 1.8;
 }
 
 .upload-area span {
     max-width: 205px;
+
     text-align: center;
+
     font-size: 14px;
     line-height: 20px;
+
     color: #686b9e;
 }
 
 .upload-area img {
     display: none;
+
     position: absolute;
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: contain;
     background: white;
 }
@@ -310,19 +359,26 @@ select {
     display: none;
 }
 
+
 .additional-images {
     display: grid;
+
     grid-template-columns: repeat(4, minmax(0, 1fr));
+
     gap: 15px;
+
     margin-top: 16px;
 }
 
 .image-box {
     height: 64px;
+
     border: 1px solid #aaa;
     border-radius: 5px;
+
     cursor: pointer;
     overflow: hidden;
+
     transition: .2s;
 }
 
@@ -331,12 +387,14 @@ select {
     background: #f7fffd;
 }
 
+
 .product-information {
     grid-column: 3 / 7;
     grid-row: 1;
 
     display: flex;
     flex-direction: column;
+
     gap: 14px;
 
     min-width: 0;
@@ -345,6 +403,7 @@ select {
 .product-information .form-group:nth-child(2) textarea {
     height: 148px;
 }
+
 
 .price-group {
     grid-column: 1 / 4;
@@ -406,8 +465,11 @@ select {
 .multi-select-button svg {
     width: 17px;
     height: 17px;
+
     color: #777;
+
     transition: .2s;
+
     flex-shrink: 0;
 }
 
@@ -421,10 +483,13 @@ select {
     white-space: nowrap;
 }
 
+
 .multi-select-options {
     position: absolute;
+
     top: 47px;
     left: 0;
+
     z-index: 20;
 
     width: 100%;
@@ -432,6 +497,7 @@ select {
     padding: 12px;
 
     background: white;
+
     border: 1px solid var(--border);
     border-radius: 6px;
 
@@ -441,7 +507,7 @@ select {
 }
 
 .multi-select-options[hidden] {
-    display: none;
+    display: none !important;
 }
 
 @keyframes dropdownAnimation {
@@ -458,7 +524,9 @@ select {
 
 #size-options {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 8px;
 }
 
@@ -473,6 +541,7 @@ select {
     border-radius: 5px;
 
     cursor: pointer;
+
     transition: .2s;
 }
 
@@ -490,7 +559,9 @@ select {
 #size-options label span {
     font-size: 13px;
     font-weight: 600;
+
     color: var(--dark-blue);
+
     transition: .2s;
 }
 
@@ -503,9 +574,12 @@ select {
     color: #009e89;
 }
 
+
 #color-options {
     display: grid;
+
     grid-template-columns: repeat(5, 1fr);
+
     gap: 13px 8px;
 
     justify-items: center;
@@ -564,18 +638,22 @@ select {
     outline-offset: 4px;
 }
 
+
 .highlight-section {
     grid-column: 5 / 7;
 
     display: flex;
     flex-direction: column;
+
     min-width: 0;
 }
 
 .highlight-option {
     display: flex;
     align-items: center;
+
     gap: 12px;
+
     margin-top: 10px;
 }
 
@@ -587,9 +665,12 @@ select {
 
 .switch {
     position: relative;
+
     display: inline-block;
+
     width: 39px;
     height: 19px;
+
     flex-shrink: 0;
 }
 
@@ -602,9 +683,13 @@ select {
 .slider {
     position: absolute;
     inset: 0;
+
     background: #e8e8e8;
+
     border-radius: 20px;
+
     cursor: pointer;
+
     transition: .3s;
 }
 
@@ -612,6 +697,7 @@ select {
     content: "";
 
     position: absolute;
+
     width: 15px;
     height: 15px;
 
@@ -619,6 +705,7 @@ select {
     bottom: 2px;
 
     background: white;
+
     border-radius: 50%;
 
     transition: .3s;
@@ -632,10 +719,14 @@ select {
     transform: translateX(20px);
 }
 
+
 .form-actions {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 18px;
+
     margin-top: 30px;
 }
 
@@ -643,6 +734,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 10px;
 
     width: 100%;
@@ -651,10 +743,12 @@ select {
     border-radius: 5px;
 
     font-family: 'Roboto', sans-serif;
+
     font-size: 16px;
     font-weight: 600;
 
     cursor: pointer;
+
     transition: .2s;
 }
 
@@ -662,6 +756,7 @@ select {
     width: 23px;
     height: 23px;
 }
+
 
 .btn-cancel {
     background: white;
@@ -673,6 +768,7 @@ select {
     background: #f5f5f5;
 }
 
+
 .btn-publish {
     background: var(--green);
     border: 1px solid var(--green);
@@ -682,6 +778,7 @@ select {
 .btn-publish:hover {
     background: #00ad95;
 }
+
 
 .multi-select-options[hidden] {
     display: none !important;

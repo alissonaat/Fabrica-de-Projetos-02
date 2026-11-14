@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Onvit-e | Aprovações</title>
+
+    <link rel="stylesheet" href="CSS/aprovacoes.css">
+
+    <!-- Fonte Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            onvit-e
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item">
+                <i data-lucide="house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="package"></i>
+                <span>Produtos</span>
+            </a>
+
+            <a href="#" class="menu-item active">
+                <i data-lucide="badge-check"></i>
+                <span>Aprovações</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="hand-coins"></i>
+                <span>Relatórios</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="top-header">
+
+            <div class="page-heading">
+
+                <div class="heading-icon">
+                    <i data-lucide="badge-check"></i>
+                </div>
+
+                <div>
+                    <h1>Aprovações</h1>
+
+                    <p>
+                        Analise as sugestões dos clientes e decida quais ideias serão publicadas.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="profile-logo">
+
+                    <img src="IMG/logo.png"
+                         alt="Logo NANABOROK">
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>NANABOROK</strong>
+                    <span>Minha conta</span>
+
+                </div>
+
+                <i data-lucide="chevron-down"></i>
+
+            </div>
+
+        </header>
+
+        <section class="statistics">
+
+            <div class="stat-card pending">
+
+                <span class="stat-title">Pendentes de análise</span>
+
+                <strong class="stat-number">07</strong>
+
+                <span class="stat-description">
+                    aguardando decisão
+                </span>
+
+            </div>
+
+
+            <div class="stat-card achieved">
+
+                <span class="stat-title">Meta atingida</span>
+
+                <strong class="stat-number">04</strong>
+
+                <span class="stat-description">
+                    prontas para aprovar
+                </span>
+
+            </div>
+
+
+            <div class="stat-card fundraising">
+
+                <span class="stat-title">Em arrecadação</span>
+
+                <strong class="stat-number">12</strong>
+
+                <span class="stat-description">
+                    em andamento
+                </span>
+
+            </div>
+
+
+            <div class="stat-card rejected">
+
+                <span class="stat-title">Rejeitadas</span>
+
+                <strong class="stat-number">03</strong>
+
+                <span class="stat-description">
+                    neste mês
+                </span>
+
+            </div>
+
+        </section>
+
+        <section class="suggestions">
+
+            <div class="section-heading">
+
+                <h2>Sugestões dos clientes</h2>
+
+                <p>
+                    Aprove somente ideias que atingiram a meta desejada.
+                </p>
+
+            </div>
+
+
+
+            <div class="filters">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Pesquisar sugestões"
+                    >
+
+                </div>
+
+
+            <select class="filter-select" id="category-filter">
+
+                <option value="">Todas as categorias</option>
+
+                <option value="camisetas">Camisetas</option>
+
+                <option value="jalecos">Jalecos</option>
+
+                <option value="moletons">Moletons</option>
+
+                <option value="calcas">Calças</option>
+
+                <option value="bones">Bonés</option>
+
+                <option value="acessorios">Acessórios</option>
+
+            </select>
+
+
+                <select class="filter-select">
+
+                    <option>Todos os status</option>
+                    <option>Em andamento</option>
+                    <option>Meta atingida</option>
+                    <option>Rejeitadas</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="suggestions-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Sugestão</th>
+                            <th>Cliente</th>
+                            <th>Meta</th>
+                            <th>Apoios</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <div class="suggestion-name">
+                                    <strong>Kit copo para amizade</strong>
+                                    <span>Sugestão de cliente</span>
+                                </div>
+                            </td>
+
+                            <td>Mariana Costa</td>
+
+                            <td class="goal-value">R$ 300,00</td>
+
+                            <td>
+
+                                <div class="support-info">
+
+                                    <span>180 / 300</span>
+
+                                    <div class="progress-bar">
+                                        <div class="progress purple" style="width: 60%;"></div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <span class="status ongoing">Em andamento</span>
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="btn-details">
+                                        Ver detalhes
+                                    </button>
+
+                                    <button class="btn-open">
+                                        Abrir
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="suggestion-name">
+                                    <strong>Camiseta universitária</strong>
+                                    <span>Sugestão de cliente</span>
+                                </div>
+                            </td>
+
+                            <td>Lucas Almeida</td>
+
+                            <td class="goal-value">R$ 500,00</td>
+
+                            <td>
+
+                                <div class="support-info">
+
+                                    <span>500 / 500</span>
+
+                                    <div class="progress-bar">
+                                        <div class="progress green" style="width: 100%;"></div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <span class="status achieved-status">Meta atingida</span>
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="btn-approve">
+                                        Aprovar
+                                    </button>
+
+                                    <button class="btn-reject">
+                                        Rejeitar
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="suggestion-name">
+                                    <strong>Caneca personalizada</strong>
+                                    <span>Sugestão de cliente</span>
+                                </div>
+                            </td>
+
+                            <td>Ana Beatriz</td>
+
+                            <td class="goal-value">R$ 250,00</td>
+
+                            <td>
+
+                                <div class="support-info">
+
+                                    <span>250 / 250</span>
+
+                                    <div class="progress-bar">
+                                        <div class="progress green" style="width: 100%;"></div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <span class="status achieved-status">Meta atingida</span>
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="btn-approve">
+                                        Aprovar
+                                    </button>
+
+                                    <button class="btn-reject">
+                                        Rejeitar
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="suggestion-name">
+                                    <strong>Mochila para estudantes</strong>
+                                    <span>Sugestão de cliente</span>
+                                </div>
+                            </td>
+
+                            <td>Pedro Henrique</td>
+
+                            <td class="goal-value">R$ 600,00</td>
+
+                            <td>
+
+                                <div class="support-info">
+
+                                    <span>420 / 600</span>
+
+                                    <div class="progress-bar">
+                                        <div class="progress purple" style="width: 70%;"></div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <span class="status ongoing">Em andamento</span>
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="btn-details">
+                                        Ver detalhes
+                                    </button>
+
+                                    <button class="btn-open">
+                                        Abrir
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="suggestion-name">
+                                    <strong>Jaleco com bordado</strong>
+                                    <span>Sugestão de cliente</span>
+                                </div>
+                            </td>
+
+                            <td>Juliana Santos</td>
+
+                            <td class="goal-value">R$ 400,00</td>
+
+                            <td>
+
+                                <div class="support-info">
+
+                                    <span>400 / 400</span>
+
+                                    <div class="progress-bar">
+                                        <div class="progress green" style="width: 100%;"></div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <span class="status achieved-status">Meta atingida</span>
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="btn-approve">
+                                        Aprovar
+                                    </button>
+
+                                    <button class="btn-reject">
+                                        Rejeitar
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="pagination-container">
+
+                        <span class="pagination-info" id="pagination-info">
+                            Mostrando 1 a 5
+                        </span>
+
+                        <div class="pagination-controls">
+
+                            <button class="pagination-arrow" id="prev-page" aria-label="Página anterior">
+                                <i data-lucide="chevron-left"></i>
+                            </button>
+
+                            <button class="pagination-number active" id="current-page">
+                                1
+                            </button>
+
+                            <button class="pagination-arrow" id="next-page" aria-label="Próxima página">
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+</div>
+
+
+<script>
+
+    lucide.createIcons();
+
+
+    const rows = Array.from(
+        document.querySelectorAll(
+            '.suggestions-table tbody tr'
+        )
+    );
+
+    const rowsPerPage = 5;
+
+    let currentPage = 1;
+
+    const totalPages = Math.ceil(
+        rows.length / rowsPerPage
+    );
+
+    const paginationInfo = document.getElementById(
+        'pagination-info'
+    );
+
+    const currentPageButton = document.getElementById(
+        'current-page'
+    );
+
+    const prevButton = document.getElementById(
+        'prev-page'
+    );
+
+    const nextButton = document.getElementById(
+        'next-page'
+    );
+
+
+    function updatePagination() {
+
+        const start = (currentPage - 1) * rowsPerPage;
+
+        const end = start + rowsPerPage;
+
+
+        rows.forEach((row, index) => {
+
+            row.style.display =
+                index >= start && index < end
+                    ? ''
+                    : 'none';
+
+        });
+
+
+
+        const firstItem = rows.length === 0
+            ? 0
+            : start + 1;
+
+        const lastItem = Math.min(
+            end,
+            rows.length
+        );
+
+        paginationInfo.textContent =
+            `Mostrando ${firstItem} a ${lastItem}`;
+
+
+        currentPageButton.textContent = currentPage;
+
+
+
+        prevButton.disabled = currentPage === 1;
+
+        nextButton.disabled = currentPage >= totalPages;
+
+    }
+
+    prevButton.addEventListener('click', () => {
+
+        if (currentPage > 1) {
+
+            currentPage--;
+
+            updatePagination();
+
+        }
+
+    });
+
+
+    nextButton.addEventListener('click', () => {
+
+        if (currentPage < totalPages) {
+
+            currentPage++;
+
+            updatePagination();
+
+        }
+
+    });
+
+
+    updatePagination();
+
+</script>
+
+</body>
+</html>
